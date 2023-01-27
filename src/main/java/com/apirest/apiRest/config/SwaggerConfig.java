@@ -22,15 +22,17 @@ public class SwaggerConfig {
 	public Docket productApi() {
 
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.apirest.apiRest")).paths(PathSelectors.regex("/api.*")).build()
-				.apiInfo(metaInfo());
+				.apis(RequestHandlerSelectors.basePackage("com.apirest.apiRest")).paths(PathSelectors.regex("/api.*"))
+				.build().apiInfo(metaInfo());
 
 	}
 
 	private ApiInfo metaInfo() {
 		// TODO Auto-generated method stub
 
-		ApiInfo apiInfo = new ApiInfo("", "", "", "", new Contact("", "", ""), "", "", new ArrayList<VendorExtension>()
+		ApiInfo apiInfo = new ApiInfo("Produtos APi Rest", "Api rest de cadastro de produto", "1.0", "Terms of Service",
+				new Contact("Elionai Figueiredo", "https://elionaifigueiredo.com", "elionaifigueiredo@gmail.com"),
+				"Aapache License Version 2.0", "https://www.apache.org/license.html", new ArrayList<VendorExtension>()
 
 		);
 
